@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class votacao { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+
+//Inserir quantidade totais:
+   System.out.print("Qual a quantidade de votos totais ? ");
+   int total = scanner.nextInt();
+
+ //Inserir quantidade de votos nulos:
+   System.out.print("Qual a quantidade de votos nulos ? ");
+   int nulos = scanner.nextInt();
+    
+ //Inserir quantidade de votos brancos:
+  System.out.print("Qual a quantidade de votos brancos ? ");
+  int brancos = scanner.nextInt();
+    
+    //Inserir quantidade de votos validos-:
+  System.out.print("Qual a quantidade de votos validos ? ");
+  int validos = scanner.nextInt();
+  
+//Calculo do total:
+
+
+ //Exibição dp resultado:
+   System.out.println("A porcentagem correspondente a cada tipo de voto é: " + numb "% de brancos" + nun "% de nulos" + nuv "% de validos" );
+   
+   scanner.close();
+} }
