@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class MediaAluno {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Leitura das notas
+        System.out.print("Digite a nota da 1a avaliação: ");
+        double nota1 = scanner.nextDouble();
+        
+        System.out.print("Digite a nota da 2a avaliação: ");
+        double nota2 = scanner.nextDouble();
+        
+        // Cálculo da média
+        double media = (nota1 + nota2) / 2;
+        
+        // Verificação se o aluno foi aprovado
+        if (media >= 6) {
+            System.out.println("O aluno foi aprovado com média: " + media);
+        } else {
+            System.out.println("O aluno foi reprovado com média: " + media);
+        }
+        
+        scanner.close();
+    }
+}
