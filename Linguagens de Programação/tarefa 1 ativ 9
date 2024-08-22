@@ -1,20 +1,20 @@
 import java.util.Scanner;
 
-public class positivonegativo { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+public class preçomaçãs { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
 
- //Inserir o primeiro numero:  
+ //Inserir a quantidade de maçãs compradas:  
    System.out.print("Qual o numero de maças compradas ? ");
    double maca = scanner.nextDouble();
    
- //Comparação dos valores recebidos:
+ //Definir preço das maçãs:
+ double custo;
   if (maca >= 13) {
-      double meia = maça * 1.30;
-            System.out.println("Valor total sera: ", meia);
+      custo = maca * 1.00;
         } else {
-            double duzia = maca * 1.00;
-            System.out.println("Valor total sera: ", duzia);
+            custo = maca * 1.30;
         }
         scanner.close();
+ //Exibição do valor total:
+   System.out.printf ("O Valor total das maçãs será: R$ %.2f%n", custo );
     }
 }
-
