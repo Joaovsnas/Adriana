@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class SalarioFuncionario {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Leitura dos dados
+        System.out.print("Digite o número de horas trabalhadas no mês: ");
+        double horasTrabalhadas = scanner.nextDouble();
+        
+        System.out.print("Digite o valor da hora regular: ");
+        double valorHoraRegular = scanner.nextDouble();
+        
+        // Cálculo das horas extras
+        double horasExtras = Math.max(0, horasTrabalhadas - 160); // 40 horas/semana * 4 semanas
+        double salarioHorasExtras = horasExtras * (valorHoraRegular * 1.5);
+        double salarioRegular = Math.min(160, horasTrabalhadas) * valorHoraRegular;
+        double salarioTotal = salarioRegular + salarioHorasExtras;
+        
+        System.out.println("O salário total do funcionário é: R$ " + salarioTotal);
+        
+        scanner.close();
+    }
+}
