@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class positivonegativo { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
 
- //Inserir o primeiro numero:  
+ //Inserir o numero:  
    System.out.print("Qual o numero ? ");
    double num = scanner.nextDouble();
    
