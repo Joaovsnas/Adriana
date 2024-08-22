@@ -1,0 +1,18 @@
+public class DespesaTrimestre {
+    public static void main(String[] args) {
+        // Gastos de cada mês
+        double gastoJaneiro = 15000;
+        double gastoFevereiro = 23000;
+        double gastoMarco = 17000;
+        
+        // Cálculo da despesa total
+        double despesaTotal = gastoJaneiro + gastoFevereiro + gastoMarco;
+        
+        // Cálculo da média mensal
+        double mediaMensal = despesaTotal / 3;
+        
+        // Impressão dos resultados
+        System.out.println("Despesa total no trimestre: R$ " + despesaTotal);
+        System.out.println("Média mensal de gastos: R$ " + mediaMensal);
+    }
+}
