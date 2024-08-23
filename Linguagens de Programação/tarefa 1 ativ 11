@@ -1,24 +1,25 @@
 import java.util.Scanner;
 
-public class VerificaVoto {
+public class verificarvoto {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // Leitura do ano atual e do ano de nascimento
+        // Inserir o ano atual:
         System.out.print("Digite o ano atual: ");
-        int anoAtual = scanner.nextInt();
+        int atual = scanner.nextInt();
         
+        // Inserir o ano de nascimento
         System.out.print("Digite o ano de nascimento: ");
-        int anoNascimento = scanner.nextInt();
+        int nasc = scanner.nextInt();
         
-        // Cálculo da idade
-        int idade = anoAtual - anoNascimento;
+        // Calcular a idade:
+        int idade = atual - nasc;
         
-        // Verificação se a pessoa pode votar (idade mínima de 16 anos)
+        // Verificar se possuiu a idade minima pra votar:
         if (idade >= 16) {
-            System.out.println("Você pode votar este ano.");
+            System.out.println("Você possuiu idade suficiente para votar.");
         } else {
-            System.out.println("Você não pode votar este ano.");
+            System.out.println("Você não possuiu idade suficiente para votar.");
         }
         
         scanner.close();
