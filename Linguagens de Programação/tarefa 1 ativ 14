@@ -1,25 +1,24 @@
 import java.util.Scanner;
 
-public class DuracaoJogo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class xadrez { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
         
-        // Leitura das horas de início e fim
-        System.out.print("Digite a hora de início do jogo: ");
-        int horaInicio = scanner.nextInt();
+        // INserir horário do início da partida:
+        System.out.print("Qual a hora de início do jogo ? ");
+        int hin = scanner.nextInt();
         
-        System.out.print("Digite a hora de fim do jogo: ");
-        int horaFim = scanner.nextInt();
+        // INserir horário do fim da partida:
+        System.out.print("Qual a hora de fim do jogo ? ");
+        int hfi = scanner.nextInt();
         
-        // Cálculo da duração do jogo
+        // Calcular a duração do jogo:
         int duracao;
-        if (horaFim > horaInicio) {
-            duracao = horaFim - horaInicio;
+        if (hfi > hin) {
+            duracao = hfi - hin;
         } else {
-            duracao = 24 - horaInicio + horaFim;
+            duracao = 24 - hin + hfi;
         }
         
-        System.out.println("A duração do jogo é: " + duracao + " horas.");
+        System.out.println("A duração do jogo será de: " + duracao + " horas.");
         
         scanner.close();
     }
