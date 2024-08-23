@@ -1,21 +1,22 @@
 import java.util.Scanner;
 
-public class OrdemCrescente {
+public class ordemcresc {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // Leitura dos valores
-        System.out.print("Digite o primeiro valor: ");
-        int valor1 = scanner.nextInt();
+        // Inserir o primeiro valor:
+        System.out.print("Qual o primeiro valor ? ");
+        int v1 = scanner.nextInt();
         
-        System.out.print("Digite o segundo valor: ");
-        int valor2 = scanner.nextInt();
+        // Inserir o segundo valor:
+        System.out.print("Qual o segundo valor ? ");
+        int v2 = scanner.nextInt();
         
-        // Ordenar e exibir os valores em ordem crescente
-        if (valor1 < valor2) {
-            System.out.println("Ordem crescente: " + valor1 + ", " + valor2);
+        // Ordenar os números em ordem crescente:
+        if (v1 < v2) {
+            System.out.println("Ordem crescente: " + v1 + ", " + v2);
         } else {
-            System.out.println("Ordem crescente: " + valor2 + ", " + valor1);
+            System.out.println("Ordem crescente: " + v2 + ", " + v1);
         }
         
         scanner.close();
