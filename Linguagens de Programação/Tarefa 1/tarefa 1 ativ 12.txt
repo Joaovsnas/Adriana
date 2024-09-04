@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class valormaior {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Inserir o primeiro valor:
+        System.out.print("Qual o primeiro valor ? ");
+        int v1 = scanner.nextInt();
+        
+        // Inserir o segundo valor:
+        System.out.print("Qual o segundo valor ? ");
+        int v2 = scanner.nextInt();
+        
+        // Definir qual o maior valor:
+        int maior = (v1 > v2) ? v1 : v2;
+        System.out.println("O maior valor será: " + maior);
+        
+        scanner.close();
+    }
+}

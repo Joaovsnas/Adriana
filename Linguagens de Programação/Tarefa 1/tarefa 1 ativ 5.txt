@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class vendedordecarros { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+
+ //Inserir o salario fixo:  
+   System.out.print("Qual o valor do salario fixo ? ");
+   double salfix = scanner.nextDouble();
+   
+   //Inserir o valor total de vendas:
+   System.out.print("Qual o valor do total de vendas ? ");
+   double totven = scanner.nextDouble();
+   
+   //Inserir o valor da comissao recebida:
+   System.out.print("Qual o valor da comissao recebida por unidade vendida ? ");
+   double comiss = scanner.nextDouble();
+   
+   //Inserir a quantidade carros vendidos:
+   System.out.print("Qual a quantidade de carros vendidos ? ");
+   double quantven = scanner.nextDouble();
+   
+   scanner.close();
+   
+ //Calculo dos percentuais fixos:
+    double comisscar = quantven * comiss;
+ 
+ //Calculo do adicional de 5%:
+    double adicional = totven * 0.05;
+        
+ // Cálculo do salario final:
+        double salfinal = salfix + comisscar + adicional;
+        
+ //Exibição dp resultado:
+       System.out.printf("Valor do salario final : %.2f\n", salfinal );
+   
+ 
+} }

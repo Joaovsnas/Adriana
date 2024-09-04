@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class numeromaior { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+
+ //Inserir o numero:  
+   System.out.print("Qual o numero ? ");
+   double num = scanner.nextDouble();
+   
+ //Comparação dos valores recebidos:
+  if (num > 10) {
+            System.out.println("É MAIOR QUE 10!");
+        } else {
+            System.out.println("NÃO É MAIOR QUE 10!");
+        }
+        
+        // Fechando o scanner
+        scanner.close();
+    }
+}
+

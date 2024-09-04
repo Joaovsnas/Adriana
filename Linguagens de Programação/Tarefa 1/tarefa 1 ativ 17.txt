@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class lp1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Leitura das notas:
+        System.out.print("Qual a nota da P1 ? ");
+        double P1 = scanner.nextDouble();
+        
+        System.out.print("Qual a nota da E1 ? ");
+        double E1 = scanner.nextDouble();
+        
+        System.out.print("Qual a nota da E2 ? ");
+        double E2 = scanner.nextDouble();
+        
+        System.out.print("Qual a nota da API ? ");
+        double API = scanner.nextDouble();
+        
+        System.out.print("Qual a nota da X ? ");
+        double X = scanner.nextDouble();
+        
+        System.out.print("Qual a nota da SUB ? ");
+        double SUB = scanner.nextDouble();
+        
+        // CAlcular a média de LP1:
+        double nfinal = (P1 * 0.6 + ((E1 + E2) / 2) * 0.4) * 0.5
+                           + (Math.max((P1 * 0.6 + ((E1 + E2) / 2) * 0.4 - 5.9), 0)
+                             / (P1 * 0.6 + ((E1 + E2) / 2) * 0.4 - 5.9)) * (API * 0.5)
+                           + X
+                           + (SUB * 0.2);
+        
+        // Impressão da média:
+        System.out.println("A média de LP1 deste semestre será: " + nfinal);
+        
+        scanner.close();
+    }
+}

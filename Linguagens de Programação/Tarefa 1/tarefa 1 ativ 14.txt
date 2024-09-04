@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class xadrez { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+        
+        // INserir horário do início da partida:
+        System.out.print("Qual a hora de início do jogo ? ");
+        int hin = scanner.nextInt();
+        
+        // INserir horário do fim da partida:
+        System.out.print("Qual a hora de fim do jogo ? ");
+        int hfi = scanner.nextInt();
+        
+        // Calcular a duração do jogo:
+        int duracao;
+        if (hfi > hin) {
+            duracao = hfi - hin;
+        } else {
+            duracao = 24 - hin + hfi;
+        }
+        
+        System.out.println("A duração do jogo será de: " + duracao + " horas.");
+        
+        scanner.close();
+    }
+}

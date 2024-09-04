@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class preçomaçãs { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+
+ //Inserir a quantidade de maçãs compradas:  
+   System.out.print("Qual o numero de maças compradas ? ");
+   double maca = scanner.nextDouble();
+   
+ //Definir preço das maçãs:
+ double custo;
+  if (maca >= 13) {
+      custo = maca * 1.00;
+        } else {
+            custo = maca * 1.30;
+        }
+        scanner.close();
+ //Exibição do valor total:
+   System.out.printf ("O Valor total das maçãs será: R$ %.2f%n", custo );
+    }
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class salario { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+
+ //Inserir o salario atual:
+   System.out.print("Qual o salario atual ? ");
+   double atual = scanner.nextDouble();
+
+ //Inserir a porcentagem do reajuste:
+   System.out.print("Qual o porcentual de reajuste ? ");
+   double porc = scanner.nextDouble();
+   
+     scanner.close();
+   
+ //Calculo do reajuste:
+    double reajuste = atual * (porc / 100);
+    double salfinal = atual + reajuste;
+
+ //Exibição dp resultado:
+  System.out.printf("Novo salario : %.2f\n", salfinal );
+   
+   
+ 
+} }
