@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Ferramenta {
+    // Atributos
+    private String material; // Material da ferramenta (ex: "Aço", "Alumínio")
+    private String tipo;     // Tipo da ferramenta (ex: "Chave de Boca", "Chave Philips", "Chave de Fenda")
+    private int tamanho;     // Tamanho da ferramenta (em milímetros)
+
+    // Construtor
+    public Ferramenta(String material, String tipo, int tamanho) {
+        this.material = material;
+        this.tipo = tipo;
+        this.tamanho = tamanho;
+    }
+
+    // Métodos
+    public void desapertar() {
+        System.out.println("Desapertando com a " + tipo + ".");
+    }
+
+    public void apertar() {
+        System.out.println("Apertando com a " + tipo + ".");
+    }
+
+    public void rosquear() {
+        System.out.println("Rosqueando com a " + tipo + ".");
+    }
+
+    // Método toString para representar o objeto como uma string
+    @Override
+    public String toString() {
+        return "Ferramenta{" +
+                "material='" + material + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", tamanho=" + tamanho +
+                '}';
+    }
+
+    // Método main para interagir com o usuário
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Coletar dados do usuário
+        System.out.print("Digite o material da ferramenta (ex: Aço, Alumínio): ");
+        String material = scanner.nextLine();
+
+        System.out.print("Digite o tipo da ferramenta (ex: Chave de Boca, Chave Philips, Chave de Fenda): ");
+        String tipo = scanner.nextLine();
+
+        System.out.print("Digite o tamanho da ferramenta (em mm): ");
+        int tamanho = scanner.nextInt();
+
+        // Criar uma instância da ferramenta com os dados fornecidos
+        Ferramenta ferramenta = new Ferramenta(material, tipo, tamanho);
+
+        // Mostrar os dados da ferramenta e chamar métodos
+        System.out.println("\nDetalhes da Ferramenta:");
+        System.out.println(ferramenta);
+
+        ferramenta.desapertar();
+        ferramenta.apertar();
+        ferramenta.rosquear();
+
+        // Fechar o scanner
+        scanner.close();
+    }
