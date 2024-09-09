@@ -1,0 +1,85 @@
+public class Fracao {
+    private int numerador;
+    private int denominador;
+
+    // Construtor
+    public Fracao(int numerador, int denominador) {
+        if (denominador == 0) {
+            throw new IllegalArgumentException("Denominador não pode ser zero.");
+        }
+        this.numerador = numerador;
+        this.denominador = denominador;
+        simplificar();
+    }
+
+    // Método para simplificar a fração
+    private void simplificar() {
+        int gcd = calcularMDC(numerador, denominador);
+        numerador /= gcd;
+        denominador /= gcd;
+
+        // Garantir que o denominador seja sempre positivo
+        if (denominador < 0) {
+            numerador = -numerador;
+            denominador = -denominador;
+        }
+    }
+
+    // Método para calcular o Máximo Divisor Comum (MDC)
+    private int calcularMDC(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    // Operações
+    public Fracao somar(Fracao outra) {
+        int novoNumerador = this.numerador * outra.denominador + outra.numerador * this.denominador;
+        int novoDenominador = this.denominador * outra.denominador;
+        return new Fracao(novoNumerador, novoDenominador);
+    }
+
+    public Fracao subtrair(Fracao outra) {
+        int novoNumerador = this.numerador * outra.denominador - outra.numerador * this.denominador;
+        int novoDenominador = this.denominador * outra.denominador;
+        return new Fracao(novoNumerador, novoDenominador);
+    }
+
+    public Fracao multiplicar(Fracao outra) {
+        int novoNumerador = this.numerador * outra.numerador;
+        int novoDenominador = this.denominador * outra.denominador;
+        return new Fracao(novoNumerador, novoDenominador);
+    }
+
+    public Fracao dividir(Fracao outra) {
+        if (outra.numerador == 0) {
+            throw new IllegalArgumentException("Divisão por zero não é permitida.");
+        }
+        int novoNumerador = this.numerador * outra.denominador;
+        int novoDenominador = this.denominador * outra.numerador;
+        return new Fracao(novoNumerador, novoDenominador);
+    }
+
+    // Método para exibir a fração
+    @Override
+    public String toString() {
+        return numerador + "/" + denominador;
+    }
+
+    // Método main para testes
+    public static void main(String[] args) {
+        Fracao f1 = new Fracao(2, 3);
+        Fracao f2 = new Fracao(4, 5);
+
+        System.out.println("Fração 1: " + f1);
+        System.out.println("Fração 2: " + f2);
+
+        System.out.println("Soma: " + f1.somar(f2));
+        System.out.println("Subtração: " + f1.subtrair(f2));
+        System.out.println("Multiplicação: " + f1.multiplicar(f2));
+        System.out.println("Divisão: " + f1.dividir(f2));
+    }
+}
