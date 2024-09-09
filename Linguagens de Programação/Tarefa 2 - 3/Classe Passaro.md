@@ -34,7 +34,7 @@ public class Passaro {
                 '}';
     }
 
-    // Método main para testar a classe
+    // Método main
     public static void main(String[] args) {
         Passaro passaro = new Passaro(100, 2, "comprido");
         System.out.println(passaro);
