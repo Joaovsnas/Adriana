@@ -1,14 +1,16 @@
+import java.util.Scanner;
+
 public class Passaro {
     // Definição dos atributos
-    private int penas;
-    private int asas;
-    private String bico;
+    private String especie;
+    private String cor;
+    private String genero;
 
     // Definição do Construtor
-    public Passaro(int penas, int asas, String bico) {
-        this.penas = penas;
-        this.asas = asas;
-        this.bico = bico;
+    public Passaro(String especie, String cor, String genero) {
+        this.especie = especie;
+        this.cor = cor;
+        this.genero = genero;
     }
 
     // Métodos
@@ -24,22 +26,37 @@ public class Passaro {
         System.out.println("O pássaro está comendo.");
     }
 
-    // Usar toString 
+    // Usar toString
     @Override
     public String toString() {
         return "Passaro{" +
-                "penas=" + penas +
-                ", asas=" + asas +
-                ", bico='" + bico + '\'' +
+                "especie='" + especie + '\'' +
+                ", cor='" + cor + '\'' +
+                ", genero='" + genero + '\'' +
                 '}';
     }
 
     // Método main
     public static void main(String[] args) {
-        Passaro passaro = new Passaro(100, 2, "comprido");
+        Scanner scanner = new Scanner(System.in);
+
+        // Leitura dos atributos do usuário
+        System.out.print("Digite a espécie do pássaro: ");
+        String especie = scanner.nextLine();
+        System.out.print("Digite a cor do pássaro: ");
+        String cor = scanner.nextLine();
+        System.out.print("Digite o gênero do pássaro: ");
+        String genero = scanner.nextLine();
+
+        // Criar um novo pássaro com os dados fornecidos
+        Passaro passaro = new Passaro(especie, cor, genero);
+
+        // Exibir informações e chamar métodos
         System.out.println(passaro);
         passaro.cantar();
         passaro.voar();
         passaro.comer();
+
+        scanner.close();
     }
 }
