@@ -1,0 +1,113 @@
+import java.util.Scanner;
+
+public class TestaClasse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Criar objetos de cada classe
+        Cães caes = new Cães("Labrador", "Médio", "Amarelo");
+        Pássaros passaro = new Pássaros("Longas", "Grandes", "Curto");
+        Casas casa = new Casas("Branca", "Centro", "Grande");
+        Tintas tinta = new Tintas("Azul", 1.5, "Acrílica");
+        Bolas bola = new Bolas("Média", "Vermelha", "Nike");
+        Pessoas pessoa = new Pessoas("Castanho", "Casual", "Feminino");
+        Ferramentas ferramenta = new Ferramentas("Metal", "Chave Philips", "Média");
+        Frutas fruta = new Frutas("Maçã", "Média", "Verde");
+        Flores flor = new Flores("Amarela", "Pequena", "Girassol");
+        Carros carro = new Carros("Preto", "BMW", 4);
+
+        int opcao;
+
+        do {
+            // Mostrar menu
+            System.out.println("\nMenu:");
+            System.out.println("1. Testar métodos da classe Cães");
+            System.out.println("2. Testar métodos da classe Pássaros");
+            System.out.println("3. Testar métodos da classe Casas");
+            System.out.println("4. Testar métodos da classe Tintas");
+            System.out.println("5. Testar métodos da classe Bolas");
+            System.out.println("6. Testar métodos da classe Pessoas");
+            System.out.println("7. Testar métodos da classe Ferramentas");
+            System.out.println("8. Testar métodos da classe Frutas");
+            System.out.println("9. Testar métodos da classe Flores");
+            System.out.println("10. Testar métodos da classe Carros");
+            System.out.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+            scanner.nextLine(); // Consumir a quebra de linha após o número
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("\nTestando métodos da classe Cães:");
+                    caes.latir();
+                    caes.uivar();
+                    break;
+
+                case 2:
+                    System.out.println("\nTestando métodos da classe Pássaros:");
+                    passaro.cantar();
+                    passaro.voar();
+                    break;
+
+                case 3:
+                    System.out.println("\nTestando métodos da classe Casas:");
+                    casa.abrir();
+                    casa.trancar();
+                    break;
+
+                case 4:
+                    System.out.println("\nTestando métodos da classe Tintas:");
+                    tinta.pintar();
+                    tinta.verificarQuantidade();
+                    break;
+
+                case 5:
+                    System.out.println("\nTestando métodos da classe Bolas:");
+                    bola.quicar();
+                    bola.jogar();
+                    break;
+
+                case 6:
+                    System.out.println("\nTestando métodos da classe Pessoas:");
+                    pessoa.correr();
+                    pessoa.pular();
+                    break;
+
+                case 7:
+                    System.out.println("\nTestando métodos da classe Ferramentas:");
+                    ferramenta.apertar();
+                    ferramenta.rosquear();
+                    break;
+
+                case 8:
+                    System.out.println("\nTestando métodos da classe Frutas:");
+                    fruta.descascar();
+                    fruta.comer();
+                    break;
+
+                case 9:
+                    System.out.println("\nTestando métodos da classe Flores:");
+                    flor.florir();
+                    flor.regar();
+                    break;
+
+                case 10:
+                    System.out.println("\nTestando métodos da classe Carros:");
+                    carro.acelerar();
+                    carro.buzinar();
+                    break;
+
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
+            }
+        } while (opcao != 0);
+
+        // Fechar o scanner
+        scanner.close();
+    }
+}
