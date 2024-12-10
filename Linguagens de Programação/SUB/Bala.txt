@@ -1,0 +1,41 @@
+public class Bala {
+    private String cor;
+    private String tamanho;
+    private boolean retirada;
+
+    // Construtor
+    public Bala(String cor, String tamanho) {
+        this.cor = cor;
+        this.tamanho = tamanho;
+        this.retirada = false;  // Inicialmente a bala não foi retirada
+    }
+
+    // Métodos de acesso
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public boolean isRetirada() {
+        return retirada;
+    }
+
+    public void retirar() {
+        this.retirada = true;  // Marca a bala como retirada
+    }
+
+    public void devolver() {
+        this.retirada = false;  // Marca a bala como não retirada
+    }
+}

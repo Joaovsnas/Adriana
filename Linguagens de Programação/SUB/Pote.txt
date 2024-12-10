@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Pote {
+    private ArrayList<Bala> balas;
+
+    public Pote() {
+        balas = new ArrayList<>();
+    }
+
+    // Método para adicionar balas ao pote
+    public void adicionarBala(Bala bala) {
+        balas.add(bala);
+    }
+
+    // Método para retirar uma bala aleatória do pote
+    public Bala retirarBala() {
+        Random random = new Random();
+        int index = random.nextInt(balas.size()); // Seleciona um índice aleatório
+        Bala balaRetirada = balas.get(index);
+        balaRetirada.retirar(); // Marca como retirada
+        balas.remove(index); // Remove a bala do pote
+        return balaRetirada;
+    }
+
+    // Método para devolver a bala ao pote
+    public void devolverBala(Bala bala) {
+        bala.devolver();
+        balas.add(bala);
+    }
+
+    // Método para contar o número de balas no pote
+    public int getNumeroDeBalas() {
+        return balas.size();
+    }
+}

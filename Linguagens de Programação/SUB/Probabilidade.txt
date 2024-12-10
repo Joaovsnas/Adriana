@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Probabilidade {
+    public static void main(String[] args) {
+        // Criação do scanner para entrada do usuário
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada de dados
+        System.out.print("Quantas balas vermelhas? ");
+        int vermelhas = scanner.nextInt();
+
+        System.out.print("Quantas balas verdes? ");
+        int verdes = scanner.nextInt();
+
+        System.out.print("Quantas balas brancas? ");
+        int brancas = scanner.nextInt();
+
+        System.out.print("Quantas balas amarelas? ");
+        int amarelas = scanner.nextInt();
+
+        // Total de balas
+        int totalBalas = vermelhas + verdes + brancas + amarelas;
+
+        // Calculando a probabilidade
+        double probabilidadeVermelhaEAmarela = calcularProbabilidade(vermelhas, amarelas, totalBalas);
+
+        // Exibindo a probabilidade
+        System.out.printf("A probabilidade de pegar uma bala vermelha e uma amarela é: %.4f%n", probabilidadeVermelhaEAmarela);
+    }
+
+    // Método para calcular a probabilidade de pegar uma bala vermelha e uma amarela em sequência
+    public static double calcularProbabilidade(int vermelhas, int amarelas, int totalBalas) {
+        // Probabilidade de pegar uma bala vermelha
+        double probVermelha = (double) vermelhas / totalBalas;
+
+        // Depois de retirar uma vermelha, o total de balas diminui em 1
+        double probAmarela = (double) amarelas / (totalBalas - 1);
+
+        // Probabilidade de pegar uma vermelha e uma amarela em sequência
+        return probVermelha * probAmarela;
+    }
+}
