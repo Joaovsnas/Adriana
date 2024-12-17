@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="408.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.e2_.CarroController">
+    <!-- Tabela de Carros -->
+    <TableView fx:id="tabelaCarros" layoutX="23.0" layoutY="211.0" prefHeight="163.0" prefWidth="470.0">
+        <columns>
+            <TableColumn fx:id="colunaModelo" prefWidth="139.99993324279785" text="Modelo" />
+            <TableColumn fx:id="colunaCor" prefWidth="160.800048828125" text="Cor" />
+            <TableColumn fx:id="colunaAno" prefWidth="170.39996337890625" text="Ano" />
+        </columns>
+    </TableView>
+
+    <!-- Campos para Preencher os Dados do Carro -->
+    <Label layoutX="23.0" layoutY="26.0" text="Modelo" />
+    <TextField fx:id="campoModelo" layoutX="71.0" layoutY="22.0" />
+
+    <Label layoutX="34.0" layoutY="66.0" text="Cor" />
+    <TextField fx:id="campoCor" layoutX="71.0" layoutY="62.0" />
+
+    <Label layoutX="33.0" layoutY="106.0" text="Ano" />
+    <TextField fx:id="campoAno" layoutX="71.0" layoutY="102.0" />
+
+    <!-- Botões para Interagir -->
+    <Button fx:id="btnAdicionarTabela" layoutX="53.0" layoutY="148.0" onAction="#handleAdicionarTabela" text="ADICIONAR" />
+    <Button fx:id="btnEliminar" layoutX="150.0" layoutY="148.0" onAction="#handleEliminarTabela" text="REMOVER" />
+    <Button fx:id="btnAcelerar" layoutX="256.0" layoutY="53.0" onAction="#handleAcelerar" prefHeight="25.0" prefWidth="100.0" text="ACELERAR" textAlignment="CENTER" />
+    <Button fx:id="btnDiminuir" layoutX="381.0" layoutY="53.0" onAction="#handleDiminuir" prefHeight="25.0" prefWidth="100.0" text="DIMINUIR" />
+
+    <!-- Label para Mostrar as Mensagens de Execução -->
+    <Label fx:id="mensagemExecucao" layoutX="345.0" layoutY="105.0" prefHeight="18.0" prefWidth="71.0" textAlignment="CENTER" />
+
+    <!-- Indicador de Velocidade -->
+    <Label fx:id="indicadorVelocidade" layoutX="306.0" layoutY="88.0" prefHeight="18.0" prefWidth="150.0" text="Velocidade atual: 0 km/h" />
+</AnchorPane>

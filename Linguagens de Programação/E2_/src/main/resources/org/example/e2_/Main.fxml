@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="464.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="org.example.e2_.MainController">
+   <GridPane layoutY="118.0" prefHeight="409.0" prefWidth="500.0">
+     <columnConstraints>
+       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+          <!-- Botões para acessar as outras telas -->
+          <Button fx:id="btnCarro" onAction="#handleCarroButton" prefHeight="30.0" prefWidth="90.0" text="Carro" />
+          <Button fx:id="btnSmartphone" onAction="#handleSmartphoneButton" prefHeight="30.0" prefWidth="90.0" text="Smartphone" GridPane.columnIndex="1" />
+          <Button fx:id="btnEstudante" onAction="#handleEstudanteButton" prefHeight="30.0" prefWidth="90.0" text="Estudante" GridPane.rowIndex="1" />
+          <Button fx:id="btnCurso" onAction="#handleCursoButton" prefHeight="30.0" prefWidth="90.0" text="Curso" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+          <Button fx:id="btnProduto" onAction="#handleProdutoButton" prefHeight="30.0" prefWidth="90.0" text="Produto" GridPane.rowIndex="2" />
+          <Button fx:id="btnBicicleta" onAction="#handleBicicletaButton" prefHeight="30.0" prefWidth="90.0" text="Bicicleta" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+          <Button fx:id="btnRestaurante" onAction="#handleRestauranteButton" prefHeight="30.0" prefWidth="90.0" text="Restaurante" GridPane.rowIndex="3" />
+          <Button fx:id="btnLivro" onAction="#handleLivroButton" prefHeight="30.0" prefWidth="90.0" text="Livro" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          <Button fx:id="btnPessoa" onAction="#handlePessoaButton" prefHeight="30.0" prefWidth="90.0" text="Pessoa" GridPane.rowIndex="4" />
+          <Button fx:id="btnAnimal" onAction="#handleAnimalButton" prefHeight="30.0" prefWidth="90.0" text="Animal" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      </children>
+   </GridPane>
+   <Text layoutX="82.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLASSES" textAlignment="CENTER" wrappingWidth="336.4136962890625">
+      <font>
+         <Font size="50.0" />
+      </font>
+   </Text>
+</AnchorPane>
